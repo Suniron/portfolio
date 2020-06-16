@@ -63,9 +63,9 @@ export default class MyApp extends App<{
             <meta name="theme-color" content="FFFFFF" />
           </Head>
 
-          <AppLayout>
-            <Component {...pageProps} />
-          </AppLayout>
+          {/* <AppLayout> */}
+          <Component {...pageProps} />
+          {/* </AppLayout> */}
         </Provider>
       </overmindReact.Provider>
     );
