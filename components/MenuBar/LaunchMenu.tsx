@@ -8,20 +8,14 @@ const LaunchButton = styled.button((css) =>
   css.compose(
     css.border(2),
     css.px(1),
-    css.bg("gray-300"),
+    css.rounded("md"),
+    css.bg("gray-500"),
     css.outline("none", ":focus"),
-    css.bg("gray-400", ":hover")
+    css.bg("gray-600", ":hover")
   )
 );
 const LaunchContentDiv = styled.div((css) =>
-  css.compose(
-    css.absolute(),
-    css.bg("white"),
-    // css.ml("px"),
-    // css.mb("px"),
-    css.p(2),
-    css.rounded("md")
-  )
+  css.compose(css.absolute(), css.bg("gray-200"), css.p(2), css.rounded("md"))
 );
 
 const LaunchMenu: React.FC = () => {
@@ -36,8 +30,12 @@ const LaunchMenu: React.FC = () => {
       <LaunchMenuDiv onBlur={() => setShowMenu(false)}>
         <LaunchButton onClick={switchShowMenu}>Démarrer</LaunchButton>
         <LaunchContentDiv
-          style={{ bottom: "2.27em", display: showMenu ? "" : "none" }}
+          style={{ bottom: "2em", display: showMenu ? "" : "none" }}
         >
+          <p>ELEMENT</p>
+          <p>ELEMENT</p>
+          <p>ELEMENT</p>
+          <p>ELEMENT</p>
           <p>ELEMENT</p>
           <p>ELEMENT</p>
           <p>ELEMENT</p>
