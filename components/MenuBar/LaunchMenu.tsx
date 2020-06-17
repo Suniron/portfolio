@@ -9,8 +9,7 @@ const LaunchButton = styled.button((css) =>
     css.rounded("md"),
     css.outline("none", ":focus"),
     css.bg("gray-400"),
-    css.bg("gray-500", ":hover"),
-    css.bg("gray-600", ":focus")
+    css.bg("gray-500", ":hover")
   )
 );
 const LaunchContentDiv = styled.div((css) =>
