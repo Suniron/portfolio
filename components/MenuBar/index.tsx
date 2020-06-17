@@ -10,8 +10,9 @@ const MenuBarDiv = styled.div((css) =>
     css.flex(),
     css.items("center"),
     css.w("full"),
-    css.bg("white"),
-    css.p(1)
+    css.p("px"),
+    css.z(10),
+    css.bg("gray-100")
   )
 );
 
@@ -19,7 +20,6 @@ const MenuBar: React.FC = () => {
   return (
     <MenuBarDiv>
       <LaunchMenu />
-
       <InfosAndStatus />
     </MenuBarDiv>
   );
