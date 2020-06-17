@@ -22,7 +22,13 @@ const config = createConfig({
     tablet: (cssRule): string => `@media (min-width: 768px) { ${cssRule} }`,
     laptop: (cssRule): string => `@media (min-width: 1024px) { ${cssRule} }`,
   },
-  theme,
+  theme: {
+    ...theme,
+    flex: {
+      ...theme.flex,
+      col: "column", // To fix flex-direction: column
+    },
+  },
   utils,
 });
 
