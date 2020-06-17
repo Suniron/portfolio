@@ -8,16 +8,17 @@ const LaunchButton = styled.button((css) =>
   css.compose(
     css.border(2),
     css.px(1),
+    css.bg("gray-300"),
     css.outline("none", ":focus"),
-    css.bg("gray-300")
+    css.bg("gray-400", ":hover")
   )
 );
 const LaunchContentDiv = styled.div((css) =>
   css.compose(
     css.absolute(),
     css.bg("white"),
-    css.ml("px"),
-    css.mb("px"),
+    // css.ml("px"),
+    // css.mb("px"),
     css.p(2),
     css.rounded("md")
   )

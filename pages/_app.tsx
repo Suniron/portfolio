@@ -47,7 +47,7 @@ export default class MyApp extends App<{
       <overmindReact.Provider value={this.overmind}>
         <Provider css={serverCss || createCss(config)}>
           <Head>
-            <title>The website title</title>
+            <title>Etienne BLANC - Développeur</title>
 
             <link
               href="https://unpkg.com/tailwindcss/dist/base.min.css"
@@ -58,7 +58,7 @@ export default class MyApp extends App<{
             <meta charSet="utf-8" />
             <meta
               name="description"
-              content="This is a template for NextJS + Stitches + Overmind + Typescript"
+              content="Etienne BLANC - Développeur Fullstack: son CV, ses projets et ses éxpériences"
             />
             <meta name="theme-color" content="FFFFFF" />
           </Head>
