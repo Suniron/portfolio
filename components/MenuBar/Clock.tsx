@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { fixFirstZero } from "./InfosAndStatus";
+
+const fixFirstZero = (minutes: number): string => {
+  const minutesToString = minutes.toString();
+  if (minutesToString.length === 1) {
+    return "0" + minutesToString;
+  }
+  return minutesToString;
+};
+
 export const Clock: React.FC = () => {
   const [time, setTime] = useState(new Date(Date.now()));
 

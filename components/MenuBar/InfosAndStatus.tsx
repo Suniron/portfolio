@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styles";
+import { Clock } from "./Clock";
 
 const InfosAndStatusDiv = styled.div((css) =>
   css.compose(css.absolute(), css.right(0))
@@ -8,7 +9,7 @@ const InfosAndStatusDiv = styled.div((css) =>
 const InfosAndStatus: React.FC = () => {
   return (
     <InfosAndStatusDiv>
-      <p>22h31</p>
+      <Clock />
     </InfosAndStatusDiv>
   );
 };
