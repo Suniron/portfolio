@@ -1,5 +1,5 @@
 import React from "react";
-import WindowBox from "./../WindowBox";
+import WindowBox from "../WindowBox/";
 
 interface CareerWindowProps {
   show: boolean;
@@ -9,7 +9,7 @@ interface CareerWindowProps {
 const CareerWindow: React.FC<CareerWindowProps> = ({ show, handleClose }) => {
   return (
     <WindowBox show={show} handleClose={handleClose} title="Parcours">
-      <p>Ici ira son parcours</p>
+      <p>TODO: Mettre un graphique de mon parcours ici</p>
     </WindowBox>
   );
 };
