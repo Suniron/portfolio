@@ -6,6 +6,7 @@ interface ModalProps {
   handleClose: () => void;
   children: JSX.Element;
   title: string;
+  show: boolean;
 }
 
 // Styles:
@@ -102,9 +103,14 @@ const ModalFooter = styled.div((css) =>
 const CloseButton = styled.button((css) => css.compose());
 
 // Comp
-const Modal: React.FC<ModalProps> = ({ children, title, handleClose }) => {
+const Modal: React.FC<ModalProps> = ({
+  children,
+  title,
+  handleClose,
+  show,
+}) => {
   return (
-    <ModalMain>
+    <ModalMain style={{ display: show ? "" : "none" }}>
       <ModalOverlay></ModalOverlay>
 
       <ModalContainer style={{ maxHeight: "80vh" }}>

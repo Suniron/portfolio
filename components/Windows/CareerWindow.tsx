@@ -7,11 +7,8 @@ interface CareerWindowProps {
 }
 
 const CareerWindow: React.FC<CareerWindowProps> = ({ show, handleClose }) => {
-  if (!show) {
-    return null;
-  }
   return (
-    <WindowBox handleClose={handleClose} title="Parcours">
+    <WindowBox show={show} handleClose={handleClose} title="Parcours">
       <p>Ici ira son parcours</p>
     </WindowBox>
   );
