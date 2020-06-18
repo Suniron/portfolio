@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import CareerWindow from "components/Windows/CareerWindow";
 import { styled } from "styles";
+import CareerWindow from "components/Windows/CareerWindow";
+import ProjectWindow from "components/Windows/ProjectWindow";
 
 const LaunchContentDiv = styled.div((css) =>
-  css.compose(
-    css.absolute(),
-    css.bg("gray-200"),
-    css.p(2),
-    css.rounded("md"),
-    css.shadow("md")
-  )
+  css.compose(css.absolute(), css.bg("gray-200"), css.p(2), css.rounded("sm"))
 );
 
 const ContentHeader = styled.div((css) => css.compose(css.borderB(2)));
@@ -27,15 +22,20 @@ const CvButton = styled.button((css) =>
 
 const Cv: React.FC = () => {
   const [showCareer, setShowCareer] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
 
   return (
     <CvDiv>
       <CvButton onClick={() => setShowCareer(true)}>Parcours</CvButton>
-      <CvButton>Projets</CvButton>
+      <CvButton onClick={() => setShowProjects(true)}>Projets</CvButton>
       <CvButton>Expériences</CvButton>
       <CareerWindow
         show={showCareer}
         handleClose={() => setShowCareer(false)}
+      />
+      <ProjectWindow
+        show={showProjects}
+        handleClose={() => setShowProjects(false)}
       />
     </CvDiv>
   );
