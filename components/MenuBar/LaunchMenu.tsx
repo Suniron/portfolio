@@ -25,7 +25,7 @@ const LaunchMenu: React.FC = () => {
       <LaunchMenuDiv>
         <LaunchButton onClick={switchShowMenu}>Démarrer</LaunchButton>
 
-        <LaunchMenuBox show={showMenu} />
+        <LaunchMenuBox show={showMenu} setShow={setShowMenu} />
       </LaunchMenuDiv>
     </>
   );

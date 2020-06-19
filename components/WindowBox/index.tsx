@@ -73,7 +73,7 @@ const Modal: React.FC<ModalProps> = ({
           <TopBar onClose={handleClose} title={title} />
 
           {/* <!--Body--> */}
-          <ModalBody style={{ minHeight: "70vh" }}>{children}</ModalBody>
+          <ModalBody style={{ minHeight: "60vh" }}>{children}</ModalBody>
 
           {/* <!--Footer--> */}
         </ModalContent>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, SetStateAction } from "react";
 import { styled } from "styles";
 import CareerWindow from "components/Windows/CareerWindow";
 import ProjectWindow from "components/Windows/ProjectWindow";
@@ -43,14 +43,22 @@ const Cv: React.FC = () => {
 
 const LaunchMenuBox: React.FC<{
   show: boolean;
-}> = ({ show }) => {
+  setShow: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ show, setShow }) => {
   return (
-    <LaunchContentDiv style={{ bottom: "2em", display: show ? "" : "none" }}>
-      <ContentHeader>
-        <ContentTitle>Etienne Blanc</ContentTitle>
-      </ContentHeader>
-      <Cv />
-    </LaunchContentDiv>
+    <>
+      {show ? (
+        <LaunchContentDiv
+          style={{ bottom: "2em", display: show ? "" : "none" }}
+          onBlur={() => setShow(false)}
+        >
+          <ContentHeader>
+            <ContentTitle>Etienne Blanc</ContentTitle>
+          </ContentHeader>
+          <Cv />
+        </LaunchContentDiv>
+      ) : null}
+    </>
   );
 };
 
