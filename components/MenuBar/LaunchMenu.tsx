@@ -6,10 +6,10 @@ const LaunchButton = styled.button((css) =>
   css.compose(
     css.border(2),
     css.px(1),
-    css.rounded("md"),
+    css.rounded("sm"),
     css.outline("none", ":focus"),
-    css.bg("gray-400"),
-    css.bg("gray-500", ":hover")
+    css.bg("gray-500"),
+    css.bg("gray-600", ":hover")
   )
 );
 
