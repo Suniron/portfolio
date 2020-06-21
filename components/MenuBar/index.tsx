@@ -10,15 +10,14 @@ const MenuBarDiv = styled.div((css) =>
     css.flex(),
     css.items("center"),
     css.w("full"),
-    css.p("px"),
     css.z(10),
-    css.bg("gray-100")
+    css.bg("blue-700")
   )
 );
 
 const MenuBar: React.FC = () => {
   return (
-    <MenuBarDiv>
+    <MenuBarDiv className="radiant">
       <LaunchMenu />
       <InfosAndStatus />
     </MenuBarDiv>

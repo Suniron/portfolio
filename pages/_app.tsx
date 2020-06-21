@@ -6,6 +6,7 @@ import { createCss, TCss } from "@stitches/css";
 import { createOvermind, createOvermindSSR, rehydrate } from "overmind";
 import * as overmindReact from "overmind-react";
 import * as overmindStore from "store";
+import "../styles/custom.scss";
 
 export default class MyApp extends App<{
   serverCss: TCss<typeof config>;

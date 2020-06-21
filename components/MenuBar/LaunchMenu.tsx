@@ -4,12 +4,15 @@ import LaunchMenuBox from "./LaunchMenuBox";
 const LaunchMenuDiv = styled.div((css) => css.compose(css.inlineBlock()));
 const LaunchButton = styled.button((css) =>
   css.compose(
-    css.border(2),
-    css.px(1),
-    css.rounded("sm"),
+    css.px(2),
+    css.roundedR("full"),
     css.outline("none", ":focus"),
-    css.bg("gray-500"),
-    css.bg("gray-600", ":hover")
+    css.bg("green-600"),
+    css.bg("green-700", ":hover"),
+    css.text("white"),
+    css.text("xl"),
+    css.font("medium"),
+    css.italic()
   )
 );
 
@@ -23,7 +26,9 @@ const LaunchMenu: React.FC = () => {
   return (
     <>
       <LaunchMenuDiv>
-        <LaunchButton onClick={switchShowMenu}>Démarrer</LaunchButton>
+        <LaunchButton onClick={switchShowMenu} className="radiant">
+          Démarrer
+        </LaunchButton>
 
         <LaunchMenuBox show={showMenu} setShow={setShowMenu} />
       </LaunchMenuDiv>
