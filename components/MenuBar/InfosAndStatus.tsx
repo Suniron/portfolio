@@ -16,7 +16,7 @@ const InfosAndStatusDiv = styled.div((css) =>
 
 const InfosAndStatus: React.FC = () => {
   return (
-    <InfosAndStatusDiv className="radiant">
+    <InfosAndStatusDiv className="radient">
       <Clock />
     </InfosAndStatusDiv>
   );

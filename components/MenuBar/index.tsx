@@ -17,7 +17,7 @@ const MenuBarDiv = styled.div((css) =>
 
 const MenuBar: React.FC = () => {
   return (
-    <MenuBarDiv className="radiant">
+    <MenuBarDiv className="radient">
       <LaunchMenu />
       <InfosAndStatus />
     </MenuBarDiv>
