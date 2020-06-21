@@ -10,8 +10,8 @@ const ProjectWindow: React.FC<ProjectWindowProps> = ({ show, handleClose }) => {
   return (
     <WindowBox show={show} handleClose={handleClose} title="Projets">
       <p>
-        TODO: Mettre tous les projets ici avec lien, image de présentation et
-        une courte description.
+        TODO: Mettre tous mes compétences ici, classées par domaine. Ajouter une
+        barre de recherche pour chercher une compétence précise
       </p>
     </WindowBox>
   );
