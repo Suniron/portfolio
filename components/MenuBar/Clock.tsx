@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { styled } from "styles";
 
 const fixFirstZero = (minutes: number): string => {
   const minutesToString = minutes.toString();
@@ -8,6 +9,7 @@ const fixFirstZero = (minutes: number): string => {
   return minutesToString;
 };
 
+const ClockText = styled.p((css) => css.text("white"));
 export const Clock: React.FC = () => {
   const [time, setTime] = useState(new Date(Date.now()));
 
@@ -19,5 +21,9 @@ export const Clock: React.FC = () => {
     );
     return () => clearInterval(checkEachSecond);
   });
-  return <>{time.getHours() + ":" + fixFirstZero(time.getMinutes())}</>;
+  return (
+    <ClockText>
+      {time.getHours() + ":" + fixFirstZero(time.getMinutes())}
+    </ClockText>
+  );
 };
