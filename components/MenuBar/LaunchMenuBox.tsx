@@ -73,7 +73,7 @@ const LaunchMenuBox: React.FC<{
         <div>
           <LaunchContentDiv style={{ bottom: "2em" }}>
             <ContentHeader className="radient">
-              <UserLogo src="/images/me.png" />
+              <UserLogo src="/images/Etienne-Blanc.jpg" />
               <UserName>Etienne Blanc</UserName>
             </ContentHeader>
             <Cv />
