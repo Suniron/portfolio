@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { styled } from "../../styles";
 import LaunchMenuBox from "./LaunchMenuBox";
+import { useOnClickOutside } from "utils/hooks";
 
 const LaunchMenuDiv = styled.div((css) => css.compose(css.inlineBlock()));
 const LaunchButton = styled.button((css) =>
@@ -23,20 +24,25 @@ const WindowsLogo = styled.img((css) => css.compose(css.h(6)));
 const LaunchMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const ref = useRef(undefined);
+  useOnClickOutside(ref, () => setShowMenu(false));
+
   const toggleShowMenu = () => {
     setShowMenu(showMenu ? false : true);
   };
 
   return (
     <>
-      <LaunchMenuDiv onBlur={() => setShowMenu(false)}>
-        <LaunchButton onClick={toggleShowMenu} className="radient">
-          <WindowsLogo src="/images/windowsLogo.png" />
-          Démarrer
-        </LaunchButton>
+      <div ref={ref}>
+        <LaunchMenuDiv>
+          <LaunchButton onClick={toggleShowMenu} className="radient">
+            <WindowsLogo src="/images/windowsLogo.png" />
+            Démarrer
+          </LaunchButton>
 
-        <LaunchMenuBox show={showMenu} />
-      </LaunchMenuDiv>
+          <LaunchMenuBox show={showMenu} />
+        </LaunchMenuDiv>
+      </div>
     </>
   );
 };
