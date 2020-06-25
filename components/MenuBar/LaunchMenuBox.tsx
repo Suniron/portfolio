@@ -66,22 +66,20 @@ const Cv: React.FC = () => {
 
 const LaunchMenuBox: React.FC<{
   show: boolean;
-  setShow: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ show, setShow }) => {
+}> = ({ show }) => {
   return (
     <>
-      {show ? (
-        <LaunchContentDiv
-          style={{ bottom: "2em" }}
-          onBlur={() => setShow(false)}
-        >
-          <ContentHeader className="radient">
-            <UserLogo src="/images/me.png" />
-            <UserName>Etienne Blanc</UserName>
-          </ContentHeader>
-          <Cv />
-        </LaunchContentDiv>
-      ) : null}
+      {show && (
+        <div>
+          <LaunchContentDiv style={{ bottom: "2em" }}>
+            <ContentHeader className="radient">
+              <UserLogo src="/images/me.png" />
+              <UserName>Etienne Blanc</UserName>
+            </ContentHeader>
+            <Cv />
+          </LaunchContentDiv>
+        </div>
+      )}
     </>
   );
 };

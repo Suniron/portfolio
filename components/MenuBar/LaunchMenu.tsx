@@ -23,19 +23,19 @@ const WindowsLogo = styled.img((css) => css.compose(css.h(6)));
 const LaunchMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const switchShowMenu = () => {
+  const toggleShowMenu = () => {
     setShowMenu(showMenu ? false : true);
   };
 
   return (
     <>
-      <LaunchMenuDiv>
-        <LaunchButton onClick={switchShowMenu} className="radient">
+      <LaunchMenuDiv onBlur={() => setShowMenu(false)}>
+        <LaunchButton onClick={toggleShowMenu} className="radient">
           <WindowsLogo src="/images/windowsLogo.png" />
           Démarrer
         </LaunchButton>
 
-        <LaunchMenuBox show={showMenu} setShow={setShowMenu} />
+        <LaunchMenuBox show={showMenu} />
       </LaunchMenuDiv>
     </>
   );
