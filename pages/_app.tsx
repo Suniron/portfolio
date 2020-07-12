@@ -1,16 +1,12 @@
 import App from "next/app";
 import Head from "next/head";
 import React from "react";
-import { config, Provider } from "../styles";
-import { createCss, TCss } from "@stitches/css";
 import { createOvermind, createOvermindSSR, rehydrate } from "overmind";
-import * as overmindReact from "overmind-react";
+import { Provider } from "overmind-react";
 import * as overmindStore from "store";
 import "../styles/custom.scss";
 
-export default class MyApp extends App<{
-  serverCss: TCss<typeof config>;
-}> {
+export default class MyApp extends App {
   overmind = createOvermind(overmindStore.config);
   // CLIENT: On initial route
   // SERVER: On initial route
@@ -41,33 +37,31 @@ export default class MyApp extends App<{
   // SERVER: On initial route
 
   render(): JSX.Element {
-    const { Component, pageProps, serverCss } = this.props;
+    const { Component, pageProps } = this.props;
 
     return (
-      <overmindReact.Provider value={this.overmind}>
-        <Provider css={serverCss || createCss(config)}>
-          <Head>
-            <title>Etienne BLANC - Développeur</title>
+      <Provider value={this.overmind}>
+        <Head>
+          <title>Etienne BLANC - Développeur</title>
 
-            <link
-              href="https://unpkg.com/tailwindcss/dist/base.min.css"
-              rel="stylesheet"
-            />
-            <link rel="icon" href="favicon.ico" />
-            <meta name="creator" content="Etienne BLANC" />
-            <meta charSet="utf-8" />
-            <meta
-              name="description"
-              content="Etienne BLANC - Développeur Fullstack: son CV, ses projets et ses éxpériences"
-            />
-            <meta name="theme-color" content="FFFFFF" />
-          </Head>
+          <link
+            href="https://unpkg.com/tailwindcss/dist/base.min.css"
+            rel="stylesheet"
+          />
+          <link rel="icon" href="favicon.ico" />
+          <meta name="creator" content="Etienne BLANC" />
+          <meta charSet="utf-8" />
+          <meta
+            name="description"
+            content="Etienne BLANC - Développeur Fullstack: son CV, ses projets et ses éxpériences"
+          />
+          <meta name="theme-color" content="FFFFFF" />
+        </Head>
 
-          {/* <AppLayout> */}
-          <Component {...pageProps} />
-          {/* </AppLayout> */}
-        </Provider>
-      </overmindReact.Provider>
+        {/* <AppLayout> */}
+        <Component {...pageProps} />
+        {/* </AppLayout> */}
+      </Provider>
     );
   }
 }
