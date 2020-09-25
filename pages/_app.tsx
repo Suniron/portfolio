@@ -5,6 +5,7 @@ import { createOvermind, createOvermindSSR, rehydrate } from "overmind";
 import { Provider } from "overmind-react";
 import * as overmindStore from "store";
 import "../styles/custom.scss";
+import "../styles/base.min.scss"
 
 export default class MyApp extends App {
   overmind = createOvermind(overmindStore.config);
@@ -44,12 +45,9 @@ export default class MyApp extends App {
         <Head>
           <title>Etienne BLANC - Développeur</title>
 
-          <link
-            href="https://unpkg.com/tailwindcss/dist/base.min.css"
-            rel="stylesheet"
-          />
           <link rel="icon" href="favicon.ico" />
           <meta name="creator" content="Etienne BLANC" />
+          <meta name="lang" content="FR" />
           <meta charSet="utf-8" />
           <meta
             name="description"
