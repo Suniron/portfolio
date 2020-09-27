@@ -1,13 +1,13 @@
 import React from "react";
 import WindowBox from "../WindowBox/";
-import { styled } from "styles";
+import { styled } from "stitches.config";
 
 interface CareerWindowProps {
   show: boolean;
   handleClose: () => void;
 }
 
-const MyCareerSvg = styled.img((css) => css.compose());
+const MyCareerSvg = styled.img({});
 
 const CareerWindow: React.FC<CareerWindowProps> = ({ show, handleClose }) => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { styled } from "styles";
+import { styled } from "stitches.config";
 
 const fixFirstZero = (minutes: number): string => {
   const minutesToString = minutes.toString();
@@ -9,7 +9,7 @@ const fixFirstZero = (minutes: number): string => {
   return minutesToString;
 };
 
-const ClockText = styled.p((css) => css.text("white"));
+const ClockText = styled.p({ color: "white" });
 export const Clock: React.FC = () => {
   const [time, setTime] = useState(new Date(Date.now()));
 

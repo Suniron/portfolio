@@ -5,7 +5,7 @@ import { createOvermind, createOvermindSSR, rehydrate } from "overmind";
 import { Provider } from "overmind-react";
 import * as overmindStore from "store";
 import "../styles/custom.scss";
-import "../styles/base.min.scss"
+import "../styles/base.min.scss";
 
 export default class MyApp extends App {
   overmind = createOvermind(overmindStore.config);
@@ -19,7 +19,7 @@ export default class MyApp extends App {
     if (typeof window !== "undefined") {
       // On the client we just instantiate the Overmind instance and run
       // the "changePage" action
-
+      this.overmind = createOvermind(overmindStore.config);
       this.overmind.actions.changePage(mutations);
     } else {
       // On the server we rehydrate the mutations to an SSR instance of Overmind,
@@ -56,9 +56,7 @@ export default class MyApp extends App {
           <meta name="theme-color" content="FFFFFF" />
         </Head>
 
-        {/* <AppLayout> */}
         <Component {...pageProps} />
-        {/* </AppLayout> */}
       </Provider>
     );
   }

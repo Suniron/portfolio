@@ -1,8 +1,8 @@
 import React from "react";
-import { styled } from "styles/";
+import { styled } from "stitches.config";
 import DesktopIcon from "./DesktopIcon";
 
-const DesktopIconsDiv = styled.div((css) => css.compose(css.p(4)));
+const DesktopIconsDiv = styled.div({ padding: "$4" });
 
 const DesktopIcons: React.FC = () => {
   return (

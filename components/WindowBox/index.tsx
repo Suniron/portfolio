@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styles";
+import { styled } from "stitches.config";
 import TopBar from "./TopBar";
 
 // Types:
@@ -11,49 +11,47 @@ interface ModalProps {
 }
 
 // Styles:
-const ModalMain = styled.div((css) =>
-  css.compose(
-    css.bg("transparent"),
-    css.fixed(),
-    css.w("full"),
-    css.h("full"),
-    css.top(0),
-    css.left(0),
-    css.flex(),
-    css.items("center"),
-    css.justify("center"),
-    css.z(10)
-  )
-);
+const ModalMain = styled.div({
+  backgroundColor: "transparent",
+  position: "fixed",
+  width: "100%",
+  height: "100%",
+  top: 0,
+  left: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 10,
+});
 
-const ModalOverlay = styled.div((css) =>
-  css.compose(
-    css.absolute(),
-    css.w("full"),
-    css.h("full"),
-    css.bg("black"),
-    css.opacity(50)
-  )
-);
+const ModalOverlay = styled.div({
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "black",
+  opacity: "50%",
+});
 
-const ModalContainer = styled.div((css) =>
-  css.compose(
-    css.bg("blue-500"),
-    css.w("11/12"),
-    css.tablet.w("3/4"),
+const ModalContainer = styled.div({
+  backgroundColor: "#4299e1",
+  width: "90%",
+  marginX: "auto",
+  boxShadow: "0px 5px 15px",
+  zIndex: 50,
+  overflowY: "auto",
+  maxWidth: "90%",
+  maxHeight: "80vh",
+  padding: "0.2em",
+  tablet: { width: "75%" },
+});
 
-    css.mx("auto"),
-    css.rounded("sm"),
-    css.shadow("lg"),
-    css.z(50),
-    css.overflowY("auto"),
-    css.maxW("screen-sm")
-  )
-);
+const ModalContent = styled.div({ textAlign: "left" });
 
-const ModalContent = styled.div((css) => css.compose(css.text("left")));
-
-const ModalBody = styled.div((css) => css.compose(css.bg("white"), css.px(1)));
+const ModalBody = styled.div({
+  backgroundColor: "white",
+  paddingX: "$1",
+  minHeight: "60vh",
+});
 
 // Comp
 const Modal: React.FC<ModalProps> = ({
@@ -66,14 +64,14 @@ const Modal: React.FC<ModalProps> = ({
     <ModalMain style={{ display: show ? "" : "none" }}>
       <ModalOverlay />
 
-      <ModalContainer style={{ maxHeight: "80vh", padding: "0.2em" }}>
+      <ModalContainer id="modal-container">
         {/* <!-- Add margin if you want to see some of the overlay behind the modal--> */}
         <ModalContent>
           {/* <!--Header--> */}
           <TopBar onClose={handleClose} title={title} />
 
           {/* <!--Body--> */}
-          <ModalBody style={{ minHeight: "60vh" }}>{children}</ModalBody>
+          <ModalBody id="modal-body">{children}</ModalBody>
 
           {/* <!--Footer--> */}
         </ModalContent>

@@ -1,18 +1,16 @@
 import React from "react";
-import { styled } from "styles";
+import { styled } from "stitches.config";
 import { Clock } from "./Clock";
 
-const InfosAndStatusDiv = styled.div((css) =>
-  css.compose(
-    css.absolute(),
-    css.flex(),
-    css.items("center"),
-    css.right(0),
-    css.px(1),
-    css.bg("blue-500"),
-    css.h("full")
-  )
-);
+const InfosAndStatusDiv = styled.div({
+  position: "absolute",
+  display: "flex",
+  alignItems: "center",
+  right: 0,
+  paddingX: "$1",
+  backgroundColor: "#4299e1",
+  height: "100%",
+});
 
 const InfosAndStatus: React.FC = () => {
   return (

@@ -1,25 +1,29 @@
 import React, { useState, useRef } from "react";
-import { styled } from "../../styles";
+import { styled } from "stitches.config";
 import LaunchMenuBox from "./LaunchMenuBox";
 import { useOnClickOutside } from "utils/hooks";
 
-const LaunchMenuDiv = styled.div((css) => css.compose(css.inlineBlock()));
-const LaunchButton = styled.button((css) =>
-  css.compose(
-    css.px(2),
-    css.flex(),
-    css.items("center"),
-    css.roundedR("full"),
-    css.outline("none", ":focus"),
-    css.bg("green-600"),
-    css.bg("green-700", ":hover"),
-    css.text("white"),
-    css.text("xl"),
-    css.font("medium"),
-    css.italic()
-  )
-);
-const WindowsLogo = styled.img((css) => css.compose(css.h(6)));
+const LaunchMenuDiv = styled.div({ display: "inline-block" });
+
+const LaunchButton = styled.button({
+  paddingX: "0.5rem",
+  paddingY: "0.2rem",
+  display: "flex",
+  alignItems: "center",
+  backgroundColor: "#38a169",
+  borderTopRightRadius: 9999,
+  borderBottomRightRadius: 9999,
+  color: "white",
+  fontSize: "1.25rem",
+  fontWeight: 500,
+  fontStyle: "italic",
+  fontFamily: "system-ui",
+  ":focus": {
+    outline: "none",
+  },
+  ":hover": { backgroundColor: "#2f855a" },
+});
+const WindowsLogo = styled.img({ height: "1.5rem" });
 
 const LaunchMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);

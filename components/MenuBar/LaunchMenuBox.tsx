@@ -1,45 +1,51 @@
 import React, { useState } from "react";
-import { styled } from "styles";
+import { styled } from "stitches.config";
 import CareerWindow from "components/Windows/CareerWindow";
 import ProjectWindow from "components/Windows/ProjectWindow";
 import SkillWindow from "components/Windows/SkillWindow";
 
-const LaunchContentDiv = styled.div((css) =>
-  css.compose(
-    css.absolute(),
-    css.bg("gray-200"),
-    css.rounded("sm"),
-    css.border(2),
-    css.border("blue-700")
-  )
-);
+const LaunchContentDiv = styled.div({
+  position: "absolute",
+  backgroundColor: "ivory",
+  borderRadius: 2,
+  border: "#2b6cb0",
+  borderWidth: 2,
+  bottom: "2em",
+});
 
-const ContentHeader = styled.div((css) =>
-  css.compose(
-    css.borderB(2),
-    css.bg("blue-700"),
-    css.p(1),
-    css.text("white"),
-    css.flex(),
-    css.items("center"),
-    css.w("full")
-  )
-);
-const UserLogo = styled.img((css) =>
-  css.compose(css.h(12), css.border(2), css.rounded("md"))
-);
-const UserName = styled.h2((css) =>
-  css.compose(css.text("xl"), css.minW("full"), css.px(1))
-);
-const CvDiv = styled.div((css) => css.compose(css.flex(), css.flex("col")));
-const CvButton = styled.button((css) =>
-  css.compose(
-    css.text("left"),
-    css.px(1),
-    css.outline("none", ":focus"),
-    css.bg("gray-300", ":hover")
-  )
-);
+const ContentHeader = styled.div({
+  borderWidth: "10",
+  border: "#2b6cb0",
+  backgroundColor: "#2b6cb0",
+  padding: 5,
+  color: "white",
+  display: "flex",
+  alignItems: "center",
+  width: "100%",
+});
+
+const UserLogo = styled.img({
+  height: 60,
+  width: 60,
+  borderWidth: 2,
+  borderRadius: 3,
+});
+
+const UserName = styled.h2({
+  fontSize: "xl",
+  fontWeight: 300,
+  minWidth: "100%",
+  paddingX: "$2",
+});
+
+const CvDiv = styled.div({ display: "flex", flexDirection: "column" });
+
+const CvButton = styled.button({
+  textAlign: "left",
+  paddingX: "$1",
+  ":focus": { outline: "none" },
+  ":hover": { backgroundColor: "rgb(226, 232, 240)" },
+});
 
 const Cv: React.FC = () => {
   const [showCareer, setShowCareer] = useState(false);
@@ -71,7 +77,7 @@ const LaunchMenuBox: React.FC<{
     <>
       {show && (
         <div>
-          <LaunchContentDiv style={{ bottom: "2em" }}>
+          <LaunchContentDiv>
             <ContentHeader className="radient">
               <UserLogo src="/images/Etienne-Blanc.jpg" />
               <UserName>Etienne Blanc</UserName>

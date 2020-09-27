@@ -1,9 +1,9 @@
 import React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { css } from "../styles";
+import NextDocument, { DocumentContext } from "next/document";
+import { css } from "../stitches.config";
 
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+export default class Document extends NextDocument {
+  static async getInitialProps(ctx: DocumentContext) {
     const originalRenderPage = ctx.renderPage;
 
     try {
@@ -14,32 +14,24 @@ export default class MyDocument extends Document {
         return result;
       };
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps = await NextDocument.getInitialProps(ctx);
 
       return {
         ...initialProps,
         styles: (
           <>
             {initialProps.styles}
+
             {extractedStyles.map((content, index) => (
-              <style key={index}>{content}</style>
+              <style
+                key={index}
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
             ))}
           </>
         ),
       };
     } finally {
     }
-  }
-
-  render(): JSX.Element {
-    return (
-      <Html lang="en">
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
   }
 }

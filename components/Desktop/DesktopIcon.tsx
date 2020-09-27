@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styles/";
+import { styled } from "stitches.config";
 
 interface DesktopIconProps {
   name: string;
@@ -7,17 +7,16 @@ interface DesktopIconProps {
   href?: string;
 }
 
-const IconLink = styled.a((css) =>
-  css.compose(
-    css.flex(),
-    css.flex("col"),
-    css.items("center"),
-    css.py(2),
-    css.text("center")
-  )
-);
-const IconSVG = styled.img((css) => css.compose(css.w(10)));
-const IconName = styled.p((css) => css.compose(css.text("white")));
+const IconLink = styled.a({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  textAlign: "center",
+  paddingY: "$2",
+  textDecoration: "none",
+});
+const IconSVG = styled.img({ width: "2.5rem" });
+const IconName = styled.p({ color: "white" });
 
 const DesktopIcon: React.FC<DesktopIconProps> = ({ name, svgUrl, href }) => {
   return (

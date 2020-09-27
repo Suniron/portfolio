@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "styles";
+import { styled } from "stitches.config";
 
 // Types:
 interface ModalProps {
@@ -9,97 +9,82 @@ interface ModalProps {
 }
 
 // Styles:
-const ModalMain = styled.div((css) =>
-  css.compose(
-    css.bg("transparent"),
-    css.fixed(),
-    css.w("full"),
-    css.h("full"),
-    css.top(0),
-    css.left(0),
-    css.flex(),
-    css.items("center"),
-    css.justify("center"),
-    css.z(10)
-  )
-);
+const ModalMain = styled.div({
+  backgroundColor: "transparent",
+  position: "fixed",
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  zIndex: 10,
+});
 
-const ModalOverlay = styled.div((css) =>
-  css.compose(
-    css.absolute(),
-    css.w("full"),
-    css.h("full"),
-    css.bg("black"),
-    css.opacity(75)
-  )
-);
+const ModalOverlay = styled.div({
+  position: "absolute",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "black",
+  opacity: "75%",
+});
 
-const ModalContainer = styled.div((css) =>
-  css.compose(
-    css.bg("white"),
-    css.w("11/12"),
-    css.mx("auto"),
-    css.rounded("lg"),
-    css.shadow("lg"),
-    css.z(50),
-    css.overflowY("auto"),
-    css.maxW("screen-sm")
-  )
-);
+const ModalContainer = styled.div({
+  backgroundColor: "white",
+  width: "90%",
+  marginX: "auto",
+  borderRadius: 8,
+  boxShadow: "0px 5px 15px",
+  zIndex: 50,
+  overflowY: "auto",
+  maxWidth: "xs",
+});
 
-const ModalClose = styled.div((css) =>
-  css.compose(
-    css.absolute(),
-    css.top(0),
-    css.right(0),
-    css.cursor("pointer"),
-    css.flex(),
-    css.flex("col"),
-    css.items("center"),
-    css.mt(4),
-    css.mr(4),
-    css.text("white"),
-    css.text("sm"),
-    css.z(50)
-  )
-);
+const ModalClose = styled.div({
+  position: "absolute",
+  top: 0,
+  right: 0,
+  cursor: "pointer",
 
-const CloseSvgWhite = styled.svg((css) =>
-  css.compose(css.fill("current"), css.text("white"))
-);
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  marginTop: 20,
+  marginRight: 20,
+  color: "white",
+  fontSize: "xs",
+  zIndex: 50,
+});
 
-const CloseSvgBlack = styled.svg((css) =>
-  css.compose(css.fill("current"), css.text("black"))
-);
+const CloseSvgWhite = styled.svg({ fill: "currentcolor", color: "white" });
 
-const EscSpan = styled.span((css) => css.text("sm"));
+const CloseSvgBlack = styled.svg({ fill: "currentcolor", color: "black" });
 
-const ModalContent = styled.div((css) =>
-  css.compose(css.py(4), css.text("left"), css.px(6))
-);
+const EscSpan = styled.span({ fontSize: "xs" });
 
-const ModalHeader = styled.div((css) =>
-  css.compose(
-    css.flex(),
-    //css.justify("between"), // Bug stitches: not work
-    css.items("center"),
-    css.pb(3)
-  )
-);
+const ModalContent = styled.div({
+  paddingY: "$3",
+  textAlign: "left",
+  paddingX: "$3",
+});
 
-const ModalTitle = styled.p((css) =>
-  css.compose(css.text("2xl"), css.font("bold"))
-);
+const ModalHeader = styled.div({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  paddingBottom: 15,
+});
 
-const ModalClose2 = styled.div((css) =>
-  css.compose(css.cursor("pointer"), css.z(50))
-);
+const ModalTitle = styled.p({ fontWeight: 500, fontSize: "xx-large" });
 
-const ModalFooter = styled.div((css) =>
-  css.compose(css.flex(), css.justify("end"), css.mt(3))
-);
+const ModalClose2 = styled.div({ cursor: "pointer", zIndex: 50 });
 
-const CloseButton = styled.button((css) => css.compose());
+const ModalFooter = styled.div({
+  display: "flex",
+  justifyContent: "end",
+  marginTop: 15,
+});
+
+const CloseButton = styled.button({});
 
 // Comp
 const Modal: React.FC<ModalProps> = ({ children, title, handleClose }) => {
@@ -123,7 +108,7 @@ const Modal: React.FC<ModalProps> = ({ children, title, handleClose }) => {
         {/* <!-- Add margin if you want to see some of the overlay behind the modal--> */}
         <ModalContent>
           {/* <!--Header--> */}
-          <ModalHeader style={{ justifyContent: "space-between" }}>
+          <ModalHeader>
             <ModalTitle>{title}</ModalTitle>
             <ModalClose2 onClick={handleClose}>
               <CloseSvgBlack
