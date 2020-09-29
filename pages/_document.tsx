@@ -1,5 +1,6 @@
 import React from "react";
 import NextDocument, { DocumentContext } from "next/document";
+import Head from "next/head";
 import { css } from "../stitches.config";
 
 export default class Document extends NextDocument {
@@ -20,6 +21,19 @@ export default class Document extends NextDocument {
         ...initialProps,
         styles: (
           <>
+            <Head>
+              <title>Etienne BLANC - Développeur</title>
+
+              <link rel="icon" href="favicon.ico" />
+              <meta name="creator" content="Etienne BLANC" />
+              <meta name="lang" content="FR" />
+              <meta charSet="utf-8" />
+              <meta
+                name="description"
+                content="Etienne BLANC - Développeur Fullstack: son CV, ses projets et ses éxpériences"
+              />
+              <meta name="theme-color" content="FFFFFF" />
+            </Head>
             {initialProps.styles}
 
             {extractedStyles.map((content, index) => (

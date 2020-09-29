@@ -18,10 +18,6 @@ React (front) <https://reactjs.org/>
 
 Stitches (css/styled/Tailwind) <https://github.com/christianalfoni/stitches/tree/master/packages/tailwind>
 
-### Store
-
-OvermindJS <https://overmindjs.org/>
-
 ### Google Analystics
 
 1. Get vour ID at <https://analytics.google.com/analytics/web/> (Administration panel)

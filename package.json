@@ -14,8 +14,6 @@
     "@stitches/react": "^0.0.2",
     "eslint": "^7.9.0",
     "next": "9.5.3",
-    "overmind": "^25.0.2",
-    "overmind-react": "^26.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-ga": "^3.0.0",
