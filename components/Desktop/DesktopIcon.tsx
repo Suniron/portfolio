@@ -14,9 +14,18 @@ const IconLink = styled.a({
   textAlign: "center",
   paddingY: "$2",
   textDecoration: "none",
+  borderRadius: 4,
+  ":hover": {
+    backgroundColor: "gainsboro",
+  },
 });
+
 const IconSVG = styled.img({ width: "2.5rem" });
-const IconName = styled.p({ color: "white" });
+
+const IconName = styled.p({
+  color: "white",
+  textShadow: "0.5px 0.5px #000000",
+});
 
 const DesktopIcon: React.FC<DesktopIconProps> = ({ name, svgUrl, href }) => {
   return (
@@ -27,7 +36,7 @@ const DesktopIcon: React.FC<DesktopIconProps> = ({ name, svgUrl, href }) => {
       style={{ width: "7rem" }}
     >
       <IconSVG src={svgUrl} />
-      <IconName style={{ textShadow: "1px 1px #000000" }}>{name}</IconName>
+      <IconName>{name}</IconName>
     </IconLink>
   );
 };
