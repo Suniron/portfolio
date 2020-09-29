@@ -2,11 +2,11 @@ import React from "react";
 import { styled } from "stitches.config";
 import DesktopIcon from "./DesktopIcon";
 
-const DesktopIconsDiv = styled.div({ padding: "$4" });
+const DesktopIconsGrid = styled.div({ padding: "$4", display: "grid" });
 
 const DesktopIcons: React.FC = () => {
   return (
-    <DesktopIconsDiv>
+    <DesktopIconsGrid>
       <DesktopIcon
         href="/files/BLANC Etienne - CV Developpeur.pdf"
         name="Télécharger le CV"
@@ -22,7 +22,7 @@ const DesktopIcons: React.FC = () => {
         name="Appeler"
         svgUrl="/images/call.svg"
       />
-    </DesktopIconsDiv>
+    </DesktopIconsGrid>
   );
 };
 
