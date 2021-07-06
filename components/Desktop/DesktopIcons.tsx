@@ -8,7 +8,7 @@ const DesktopIcons: React.FC = () => {
   return (
     <DesktopIconsGrid>
       <DesktopIcon
-        href="/files/BLANC Etienne - CV Developpeur.pdf"
+        href="/files/BLANC Etienne - CV.pdf"
         name="Télécharger le CV"
         svgUrl="/images/download.svg"
       />
