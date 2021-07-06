@@ -3,9 +3,9 @@ import React from "react";
 import "../styles/custom.scss";
 import "../styles/base.min.scss";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />;
-}
+};
 
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to
