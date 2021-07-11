@@ -1,0 +1,24 @@
+{
+  "careerSteps": [
+    {
+      "beginDate": "03-2020",
+      "endDate": "Aujourd'hui",
+      "activity": "Lead Dev'",
+      "compagny": "Orange",
+      "missions": ["Mission 1", "Mission 2", "Mission 3"]
+    },
+    {
+      "beginDate": "09-2019",
+      "endDate": "03-2020",
+      "activity": "Développeur Fullstack",
+      "compagny": "Orange",
+      "missions": [
+        "Mission 1",
+        "Mission 2",
+        "Mission 3",
+        "Mission 4",
+        "Mission 5"
+      ]
+    }
+  ]
+}

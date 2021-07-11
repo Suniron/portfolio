@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "stitches.config";
-import CareerWindow from "components/Windows/CareerWindow";
+import CareerWindow from "components/Career/CareerWindow";
 import ProjectWindow from "components/Windows/ProjectWindow";
 import SkillWindow from "components/Windows/SkillWindow";
 

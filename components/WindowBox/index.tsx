@@ -41,11 +41,8 @@ const ModalContainer = styled("div", {
   overflowY: "auto",
   maxWidth: "90%",
   maxHeight: "80vh",
-  padding: "0.2em",
   tablet: { width: "75%" },
 });
-
-const ModalContent = styled("div", { textAlign: "left" });
 
 const ModalBody = styled("div", {
   backgroundColor: "white",
@@ -65,16 +62,11 @@ const Modal: React.FC<ModalProps> = ({
       <ModalOverlay />
 
       <ModalContainer id="modal-container">
-        {/* <!-- Add margin if you want to see some of the overlay behind the modal--> */}
-        <ModalContent>
-          {/* <!--Header--> */}
-          <TopBar onClose={handleClose} title={title} />
+        {/* <!--Header--> */}
+        <TopBar onClose={handleClose} title={title} />
 
-          {/* <!--Body--> */}
-          <ModalBody id="modal-body">{children}</ModalBody>
-
-          {/* <!--Footer--> */}
-        </ModalContent>
+        {/* <!--Body--> */}
+        <ModalBody id="modal-body">{children}</ModalBody>
       </ModalContainer>
     </ModalMain>
   );

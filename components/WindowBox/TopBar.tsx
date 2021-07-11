@@ -6,9 +6,12 @@ interface TopBarProps {
   title: string;
 }
 const TopBarDiv = styled("div", {
-  paddingY: "$1",
+  padding: "$1",
   display: "flex",
   justifyContent: "space-between",
+  position: "sticky",
+  top: 0,
+  backgroundColor: "#4299e1",
 });
 
 const Title = styled("h3", {
