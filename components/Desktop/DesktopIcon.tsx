@@ -7,7 +7,7 @@ interface DesktopIconProps {
   href?: string;
 }
 
-const IconLink = styled.a({
+const IconLink = styled("a", {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -15,14 +15,14 @@ const IconLink = styled.a({
   paddingY: "$2",
   textDecoration: "none",
   borderRadius: 4,
-  ":hover": {
+  "&:hover": {
     backgroundColor: "gainsboro",
   },
 });
 
-const IconSVG = styled.img({ width: "2.5rem" });
+const IconSVG = styled("img", { width: "2.5rem" });
 
-const IconName = styled.p({
+const IconName = styled("p", {
   color: "white",
   textShadow: "0.5px 0.5px #000000",
 });

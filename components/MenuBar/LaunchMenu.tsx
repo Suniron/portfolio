@@ -3,13 +3,15 @@ import { styled } from "stitches.config";
 import LaunchMenuBox from "./LaunchMenuBox";
 import { useOnClickOutside } from "utils/hooks";
 
-const LaunchMenuDiv = styled.div({ display: "inline-block" });
+const LaunchMenuDiv = styled("div", { display: "inline-block" });
 
-const LaunchButton = styled.button({
+const LaunchButton = styled("button", {
   paddingX: "0.5rem",
   paddingY: "0.2rem",
   display: "flex",
   alignItems: "center",
+  background:
+    "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
   backgroundColor: "#38a169",
   borderTopRightRadius: 9999,
   borderBottomRightRadius: 9999,
@@ -18,17 +20,17 @@ const LaunchButton = styled.button({
   fontWeight: 500,
   fontStyle: "italic",
   fontFamily: "system-ui",
-  ":focus": {
+  "&:focus": {
     outline: "none",
   },
-  ":hover": { backgroundColor: "#2f855a" },
+  "&:hover": { backgroundColor: "#2f855a" },
 });
-const WindowsLogo = styled.img({ height: "1.5rem" });
+const WindowsLogo = styled("img", { height: "1.5rem" });
 
 const LaunchMenu: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const ref = useRef(undefined);
+  const ref = useRef(null);
   useOnClickOutside(ref, () => setShowMenu(false));
 
   const toggleShowMenu = () => {
@@ -39,7 +41,7 @@ const LaunchMenu: React.FC = () => {
     <>
       <div ref={ref}>
         <LaunchMenuDiv>
-          <LaunchButton onClick={toggleShowMenu} className="radient">
+          <LaunchButton onClick={toggleShowMenu}>
             <WindowsLogo src="/images/windowsLogo.png" />
             Démarrer
           </LaunchButton>

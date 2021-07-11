@@ -9,7 +9,7 @@ const fixFirstZero = (minutes: number): string => {
   return minutesToString;
 };
 
-const ClockText = styled.p({ color: "white" });
+const ClockText = styled("p", { color: "white" });
 export const Clock: React.FC = () => {
   const [time, setTime] = useState(new Date(Date.now()));
 

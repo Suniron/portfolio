@@ -7,7 +7,7 @@ interface CareerWindowProps {
   handleClose: () => void;
 }
 
-const MyCareerSvg = styled.img({});
+const MyCareerSvg = styled("img", {});
 
 const CareerWindow: React.FC<CareerWindowProps> = ({ show, handleClose }) => {
   return (

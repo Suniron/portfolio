@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "stitches.config";
 import DesktopIcons from "./DesktopIcons";
 
-const DesktopDiv = styled.div({
+const DesktopDiv = styled("div", {
   width: "100%",
   height: "100vh",
   backgroundSize: "cover",

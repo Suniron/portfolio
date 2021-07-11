@@ -9,7 +9,7 @@ interface ModalProps {
 }
 
 // Styles:
-const ModalMain = styled.div({
+const ModalMain = styled("div", {
   backgroundColor: "transparent",
   position: "fixed",
   width: "100%",
@@ -20,7 +20,7 @@ const ModalMain = styled.div({
   zIndex: 10,
 });
 
-const ModalOverlay = styled.div({
+const ModalOverlay = styled("div", {
   position: "absolute",
   width: "100%",
   height: "100%",
@@ -28,7 +28,7 @@ const ModalOverlay = styled.div({
   opacity: "75%",
 });
 
-const ModalContainer = styled.div({
+const ModalContainer = styled("div", {
   backgroundColor: "white",
   width: "90%",
   marginX: "auto",
@@ -39,7 +39,7 @@ const ModalContainer = styled.div({
   maxWidth: "xs",
 });
 
-const ModalClose = styled.div({
+const ModalClose = styled("div", {
   position: "absolute",
   top: 0,
   right: 0,
@@ -55,36 +55,36 @@ const ModalClose = styled.div({
   zIndex: 50,
 });
 
-const CloseSvgWhite = styled.svg({ fill: "currentcolor", color: "white" });
+const CloseSvgWhite = styled("svg", { fill: "currentcolor", color: "white" });
 
-const CloseSvgBlack = styled.svg({ fill: "currentcolor", color: "black" });
+const CloseSvgBlack = styled("svg", { fill: "currentcolor", color: "black" });
 
-const EscSpan = styled.span({ fontSize: "xs" });
+const EscSpan = styled("span", { fontSize: "xs" });
 
-const ModalContent = styled.div({
+const ModalContent = styled("div", {
   paddingY: "$3",
   textAlign: "left",
   paddingX: "$3",
 });
 
-const ModalHeader = styled.div({
+const ModalHeader = styled("div", {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
   paddingBottom: 15,
 });
 
-const ModalTitle = styled.p({ fontWeight: 500, fontSize: "xx-large" });
+const ModalTitle = styled("p", { fontWeight: 500, fontSize: "xx-large" });
 
-const ModalClose2 = styled.div({ cursor: "pointer", zIndex: 50 });
+const ModalClose2 = styled("div", { cursor: "pointer", zIndex: 50 });
 
-const ModalFooter = styled.div({
+const ModalFooter = styled("div", {
   display: "flex",
   justifyContent: "end",
   marginTop: 15,
 });
 
-const CloseButton = styled.button({});
+const CloseButton = styled("button", {});
 
 // Comp
 const Modal: React.FC<ModalProps> = ({ children, title, handleClose }) => {

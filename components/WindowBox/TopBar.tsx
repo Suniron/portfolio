@@ -5,25 +5,25 @@ interface TopBarProps {
   onClose: () => void;
   title: string;
 }
-const TopBarDiv = styled.div({
+const TopBarDiv = styled("div", {
   paddingY: "$1",
   display: "flex",
   justifyContent: "space-between",
 });
 
-const Title = styled.h3({
+const Title = styled("h3", {
   color: "white",
   fontSize: "xl",
   fontWeight: 600,
   paddingX: "$1",
 });
 
-const CloseSvg = styled.svg({
+const CloseSvg = styled("svg", {
   fill: "white",
   backgroundColor: "orangered",
   cursor: "pointer",
   borderWidth: 2,
-  ":hover": { backgroundColor: "red" },
+  "&:hover": { backgroundColor: "red" },
 });
 
 const TopBar: React.FC<TopBarProps> = ({ onClose, title }) => {

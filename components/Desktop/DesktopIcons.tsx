@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "stitches.config";
 import DesktopIcon from "./DesktopIcon";
 
-const DesktopIconsGrid = styled.div({ padding: "$4", display: "grid" });
+const DesktopIconsGrid = styled("div", { padding: "$4", display: "grid" });
 
 const DesktopIcons: React.FC = () => {
   return (

@@ -11,7 +11,7 @@ interface ModalProps {
 }
 
 // Styles:
-const ModalMain = styled.div({
+const ModalMain = styled("div", {
   backgroundColor: "transparent",
   position: "fixed",
   width: "100%",
@@ -24,7 +24,7 @@ const ModalMain = styled.div({
   zIndex: 10,
 });
 
-const ModalOverlay = styled.div({
+const ModalOverlay = styled("div", {
   position: "absolute",
   width: "100%",
   height: "100%",
@@ -32,7 +32,7 @@ const ModalOverlay = styled.div({
   opacity: "50%",
 });
 
-const ModalContainer = styled.div({
+const ModalContainer = styled("div", {
   backgroundColor: "#4299e1",
   width: "90%",
   marginX: "auto",
@@ -45,9 +45,9 @@ const ModalContainer = styled.div({
   tablet: { width: "75%" },
 });
 
-const ModalContent = styled.div({ textAlign: "left" });
+const ModalContent = styled("div", { textAlign: "left" });
 
-const ModalBody = styled.div({
+const ModalBody = styled("div", {
   backgroundColor: "white",
   paddingX: "$1",
   minHeight: "60vh",

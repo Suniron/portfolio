@@ -4,18 +4,20 @@ import CareerWindow from "components/Windows/CareerWindow";
 import ProjectWindow from "components/Windows/ProjectWindow";
 import SkillWindow from "components/Windows/SkillWindow";
 
-const LaunchContentDiv = styled.div({
+const LaunchContentDiv = styled("div", {
   position: "absolute",
   backgroundColor: "ivory",
   borderRadius: 2,
-  border: "#2b6cb0",
+  borderColor: "#2b6cb0",
   borderWidth: 2,
   bottom: "2em",
 });
 
-const ContentHeader = styled.div({
+const ContentHeader = styled("div", {
   borderWidth: "10",
-  border: "#2b6cb0",
+  borderColor: "#2b6cb0",
+  background:
+    "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
   backgroundColor: "#2b6cb0",
   padding: 5,
   color: "white",
@@ -24,27 +26,27 @@ const ContentHeader = styled.div({
   width: "100%",
 });
 
-const UserLogo = styled.img({
+const UserLogo = styled("img", {
   height: 60,
   width: 60,
   borderWidth: 2,
   borderRadius: 3,
 });
 
-const UserName = styled.h2({
-  fontSize: "xl",
+const UserName = styled("h2", {
+  fontSize: "$5",
   fontWeight: 300,
   minWidth: "100%",
   paddingX: "$2",
 });
 
-const CvDiv = styled.div({ display: "flex", flexDirection: "column" });
+const CvDiv = styled("div", { display: "flex", flexDirection: "column" });
 
-const CvButton = styled.button({
+const CvButton = styled("button", {
   textAlign: "left",
   paddingX: "$1",
-  ":focus": { outline: "none" },
-  ":hover": { backgroundColor: "rgb(226, 232, 240)" },
+  "&:focus": { outline: "none" },
+  "&:hover": { backgroundColor: "rgb(226, 232, 240)" },
 });
 
 const Cv: React.FC = () => {
@@ -78,7 +80,7 @@ const LaunchMenuBox: React.FC<{
       {show && (
         <div>
           <LaunchContentDiv>
-            <ContentHeader className="radient">
+            <ContentHeader>
               <UserLogo src="/images/Etienne-Blanc.jpg" />
               <UserName>Etienne Blanc</UserName>
             </ContentHeader>
