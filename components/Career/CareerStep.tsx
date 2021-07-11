@@ -30,7 +30,7 @@ const StepInfo = styled("p", {
   },
 });
 
-export const CareerStep = (props: ICareerStep): FC => {
+export const CareerStep: React.FC<ICareerStep> = (props) => {
   return (
     <StepElement>
       <StepInfo style="info">
