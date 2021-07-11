@@ -15,8 +15,12 @@ const IconLink = styled("a", {
   paddingY: "$2",
   textDecoration: "none",
   borderRadius: 4,
+  borderWidth: 0.1,
+  borderColor: "transparent",
   "&:hover": {
-    backgroundColor: "gainsboro",
+    backgroundColor: "rgba(0,0,255,0.085)",
+    backdropFilter: "blur(3px)",
+    borderColor: "rgba(255,255,255, 0.3)",
   },
 });
 
