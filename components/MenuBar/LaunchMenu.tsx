@@ -13,8 +13,8 @@ const LaunchButton = styled("button", {
   background:
     "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
   backgroundColor: "#38a169",
-  borderTopRightRadius: 9999,
-  borderBottomRightRadius: 9999,
+  borderTopRightRadius: 10,
+  borderBottomRightRadius: 10,
   color: "white",
   fontSize: "1.25rem",
   fontWeight: 500,
