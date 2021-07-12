@@ -12,7 +12,7 @@ const MenuBarDiv = styled("div", {
   zIndex: 10,
   background:
     "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
-  backgroundColor: "#2b6cb0",
+  backgroundColor: "royalblue",
 });
 
 const MenuBar: React.FC = () => {

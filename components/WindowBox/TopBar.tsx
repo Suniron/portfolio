@@ -11,7 +11,7 @@ const TopBarDiv = styled("div", {
   justifyContent: "space-between",
   position: "sticky",
   top: 0,
-  backgroundColor: "#4299e1",
+  backgroundColor: "royalblue",
 });
 
 const Title = styled("h3", {

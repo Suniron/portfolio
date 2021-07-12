@@ -33,7 +33,7 @@ const ModalOverlay = styled("div", {
 });
 
 const ModalContainer = styled("div", {
-  backgroundColor: "#4299e1",
+  backgroundColor: "royalblue",
   width: "90%",
   marginX: "auto",
   boxShadow: "0px 5px 15px",

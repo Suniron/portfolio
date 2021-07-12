@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "stitches.config";
-import CareerWindow from "components/Career/CareerWindow";
+import CareerWindow from "components/Windows/CareerWindow";
 import ProjectWindow from "components/Windows/ProjectWindow";
 import SkillWindow from "components/Windows/SkillWindow";
 
@@ -8,17 +8,17 @@ const LaunchContentDiv = styled("div", {
   position: "absolute",
   backgroundColor: "ivory",
   borderRadius: 2,
-  borderColor: "#2b6cb0",
+  borderColor: "royalblue",
   borderWidth: 2,
   bottom: "2em",
 });
 
 const ContentHeader = styled("div", {
   borderWidth: "10",
-  borderColor: "#2b6cb0",
+  borderColor: "royalblue",
   background:
     "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
-  backgroundColor: "#2b6cb0",
+  backgroundColor: "royalblue",
   padding: 5,
   color: "white",
   display: "flex",

@@ -10,7 +10,7 @@ const InfosAndStatusDiv = styled("div", {
   paddingX: "$1",
   background:
     "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
-  backgroundColor: "#4299e1",
+  backgroundColor: "cornflowerblue",
   height: "100%",
 });
 
