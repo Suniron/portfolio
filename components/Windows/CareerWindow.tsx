@@ -2,6 +2,7 @@ import React from "react";
 import WindowBox from "../WindowBox";
 import { IStep, StepElement, StepInfo, StepsList } from "./StepElements";
 import useSWR from "swr";
+import Alert from "components/Alert";
 
 interface CareerWindowProps {
   show: boolean;
@@ -31,11 +32,15 @@ const Step: React.FC<IStep> = (props) => {
 };
 
 const StepsContainer = () => {
-  const { data, error } = useSWR("/datas.json");
+  const { data, error } = useSWR("/dsatas.json");
 
   if (error)
-    return <p>"Il y a eu une erreur à la récupération des données."</p>;
-  if (!data) return <p>"Chargement en cours ..."</p>;
+    return (
+      <Alert style="danger">
+        Il y a eu une erreur à la récupération des données! ⚠
+      </Alert>
+    );
+  if (!data) return <Alert>"Chargement en cours ..."</Alert>;
 
   return (
     <StepsList>
