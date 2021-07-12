@@ -46,12 +46,15 @@ const ModalContainer = styled("div", {
 
 const ModalBody = styled("div", {
   backgroundColor: "white",
-  paddingX: "$1",
+  padding: "$2",
   minHeight: "60vh",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 });
 
 // Comp
-const Modal: React.FC<ModalProps> = ({
+const WindowBox: React.FC<ModalProps> = ({
   children,
   title,
   handleClose,
@@ -61,15 +64,15 @@ const Modal: React.FC<ModalProps> = ({
     <ModalMain style={{ display: show ? "" : "none" }}>
       <ModalOverlay />
 
-      <ModalContainer id="modal-container">
+      <ModalContainer>
         {/* <!--Header--> */}
         <TopBar onClose={handleClose} title={title} />
 
         {/* <!--Body--> */}
-        <ModalBody id="modal-body">{children}</ModalBody>
+        <ModalBody>{children}</ModalBody>
       </ModalContainer>
     </ModalMain>
   );
 };
 
-export default Modal;
+export default WindowBox;
