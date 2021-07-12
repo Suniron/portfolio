@@ -13,7 +13,7 @@ export const StepElement = styled("li", {
   padding: "$3",
   margin: "$2",
   borderRadius: "12px",
-  backgroundColor: "lightblue",
+  backgroundColor: "gainsboro",
   width: "fit-content",
   boxShadow: "0px 3px 10px grey",
 });
