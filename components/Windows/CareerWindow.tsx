@@ -32,7 +32,7 @@ const Step: React.FC<IStep> = (props) => {
 };
 
 const StepsContainer = () => {
-  const { data, error } = useSWR("/dsatas.json");
+  const { data, error } = useSWR("/datas.json");
 
   if (error)
     return (
