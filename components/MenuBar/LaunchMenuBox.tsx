@@ -4,7 +4,7 @@ import CareerWindow from "components/Windows/CareerWindow";
 import ProjectWindow from "components/Windows/ProjectWindow";
 import SkillWindow from "components/Windows/SkillWindow";
 import Image from "next/image";
-import myPicture from "public/images/etienne-blanc.jpg";
+import myPicture from "../../public/images/me.jpg";
 
 const LaunchContentDiv = styled("div", {
   position: "absolute",
