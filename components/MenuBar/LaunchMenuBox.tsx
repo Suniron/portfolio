@@ -3,6 +3,8 @@ import { styled } from "stitches.config";
 import CareerWindow from "components/Windows/CareerWindow";
 import ProjectWindow from "components/Windows/ProjectWindow";
 import SkillWindow from "components/Windows/SkillWindow";
+import Image from "next/image";
+import myPicture from "public/images/etienne-blanc.jpg";
 
 const LaunchContentDiv = styled("div", {
   position: "absolute",
@@ -16,17 +18,16 @@ const LaunchContentDiv = styled("div", {
 const ContentHeader = styled("div", {
   borderWidth: "10",
   borderColor: "royalblue",
-  background:
-    "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
+  boxShadow: "inset 0px 2px 5px white, inset 0px -5px 10px darkslategrey",
   backgroundColor: "royalblue",
   padding: 5,
   color: "white",
-  display: "flex",
   alignItems: "center",
   width: "100%",
+  display: "inline-flex",
 });
 
-const UserLogo = styled("img", {
+const UserLogo = styled("div", {
   height: 60,
   width: 60,
   borderWidth: 2,
@@ -36,7 +37,6 @@ const UserLogo = styled("img", {
 const UserName = styled("h2", {
   fontSize: "$5",
   fontWeight: 300,
-  minWidth: "100%",
   paddingX: "$2",
 });
 
@@ -45,6 +45,7 @@ const CvDiv = styled("div", { display: "flex", flexDirection: "column" });
 const CvButton = styled("button", {
   textAlign: "left",
   paddingX: "$1",
+  minHeight: 25,
   "&:focus": { outline: "none" },
   "&:hover": { backgroundColor: "rgb(226, 232, 240)" },
 });
@@ -81,7 +82,14 @@ const LaunchMenuBox: React.FC<{
         <div>
           <LaunchContentDiv>
             <ContentHeader>
-              <UserLogo src="/images/Etienne-Blanc.jpg" />
+              <UserLogo>
+                <Image
+                  height={60}
+                  width={60}
+                  src={myPicture}
+                  alt="Picture of Mr BLANC"
+                />
+              </UserLogo>
               <UserName>Etienne Blanc</UserName>
             </ContentHeader>
             <Cv />
