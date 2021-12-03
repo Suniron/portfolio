@@ -16,8 +16,7 @@ const LaunchContentDiv = styled("div", {
 const ContentHeader = styled("div", {
   borderWidth: "10",
   borderColor: "royalblue",
-  background:
-    "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
+  boxShadow: "inset 0px 2px 5px white, inset 0px -5px 10px darkslategrey",
   backgroundColor: "royalblue",
   padding: 5,
   color: "white",

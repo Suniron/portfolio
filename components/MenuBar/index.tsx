@@ -10,8 +10,7 @@ const MenuBarDiv = styled("div", {
   alignItems: "center",
   width: "100%",
   zIndex: 10,
-  background:
-    "linear-gradient(white,transparent,transparent,transparent,transparent,transparent)",
+  boxShadow: "inset 0px 2px 5px white, inset 0px -5px 10px darkslategrey",
   backgroundColor: "royalblue",
 });
 
