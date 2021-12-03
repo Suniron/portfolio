@@ -1,9 +1,7 @@
 import React from "react";
 import WindowBox from "../WindowBox";
 import { IStep, StepElement, StepInfo, StepsList } from "./StepElements";
-import useSWR from "swr";
-import Alert from "components/Alert";
-
+import datas from "../../public/datas.json";
 interface CareerWindowProps {
   show: boolean;
   handleClose: () => void;
@@ -32,19 +30,11 @@ const Step: React.FC<IStep> = (props) => {
 };
 
 const StepsContainer = () => {
-  const { data, error } = useSWR("/datas.json");
-
-  if (error)
-    return (
-      <Alert style="danger">
-        Il y a eu une erreur à la récupération des données! ⚠
-      </Alert>
-    );
-  if (!data) return <Alert>"Chargement en cours ..."</Alert>;
+  const { careerSteps } = datas;
 
   return (
     <StepsList>
-      {(data.careerSteps as IStep[]).map((step) => (
+      {(careerSteps as IStep[]).map((step) => (
         <Step
           key={step.activity + "_" + step.compagny}
           beginDate={step.beginDate}
