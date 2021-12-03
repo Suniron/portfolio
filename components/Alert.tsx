@@ -4,7 +4,7 @@ export default styled("p", {
   padding: "16px",
   backgroundColor: "gainsboro",
   borderRadius: "8px",
-  fontWeight: "bold",
+  fontWeight: 550,
   width: "fit-content",
   textAlign: "center",
   variants: {
