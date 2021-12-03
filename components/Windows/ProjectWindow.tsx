@@ -23,8 +23,8 @@ const ProjectWindow: React.FC<ProjectWindowProps> = ({ show, handleClose }) => {
     <WindowBox show={show} handleClose={handleClose} title="Projets">
       <>
         <Alert>
-          En tant qu'autodidacte passionné, j'ai mené de nombreux projets: vous
-          trouverez ici les principaux! 😁
+          Autodidacte passionné, j'ai mené de nombreux projets: vous trouverez
+          ici les principaux! 😁
         </Alert>
 
         <ProjectList>
