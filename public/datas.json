@@ -20,5 +20,13 @@
         "Mission 5"
       ]
     }
+  ],
+  "projects": [
+    {
+      "name": "Le Glossaire",
+      "link": "https://leglossaire.fr",
+      "description": "Un glossaire pro et collaboratif",
+      "imgLink": "https://image.flaticon.com/icons/png/128/167/167755.png"
+    }
   ]
 }
