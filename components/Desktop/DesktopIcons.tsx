@@ -29,6 +29,11 @@ const DesktopIcons: React.FC = () => {
         name="Appeler"
         svgUrl="/images/call.svg"
       />
+      <DesktopIcon
+        href="https://www.linkedin.com/in/%E2%86%92etienne-blanc-0a3b02162"
+        name="Profil LinkedIn"
+        svgUrl="/images/linkedin.svg"
+      />
     </DesktopIconsGrid>
   );
 };
